@@ -1,0 +1,329 @@
+.project-section h1 {
+    margin-bottom: 0;
+    margin-top: var(--space-3xl);
+}
+
+.project-section h2,
+.project-description h2 {
+    margin-bottom: 0;
+}
+
+.project-section {
+    width: 90%;
+    max-width: 1400px;
+    margin-inline: auto;
+    margin: var(--space-4xl) auto;
+}
+
+.category {
+    line-height: 1.45;
+    margin: var(--space-md) 0;
+}
+
+.category h3 {
+    font-size: clamp(1.6rem, 2vw, 2.3rem);
+}
+
+.category-count {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-circle);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1.375rem;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.category-header {
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.category-header-text h3,
+.category-header-text p {
+    margin: 0.2rem;
+}
+
+.project-section .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: left;
+}
+
+.project-section .project {
+    display: flex;
+    flex-direction: column;
+    padding: 1.125rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-base);
+}
+
+.project-section .project:hover {
+    transform: translateY(-1%);
+}
+
+.project-section .project-image {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 1.125rem;
+}
+
+.project-section .project h2,
+.project-section .project h3,
+.project-section .project h4 {
+    margin: 0 0 var(--space-md);
+}
+
+.project-section .project p {
+    margin: 0 0 var(--space-xl);
+}
+
+.project-section .project-btn {
+    display: inline-block;
+    margin-top: auto;
+    align-self: flex-start;
+    background-color: var(--color-surface-muted);
+    font-weight: 600;
+    color: var(--color-black);
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-pill);
+}
+
+.project-section .project-btn svg {
+    padding-left: 10px;
+}
+
+.project-details {
+    width: 90%;
+    max-width: 1400px;
+    margin: var(--space-3xl) auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+
+    align-items: start;
+}
+
+/* BAL OLDALI GALÉRIA */
+
+.project-gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.project-main-image-wrapper {
+    width: 100%;
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+
+    padding: var(--space-md);
+
+    box-shadow: var(--shadow-panel);
+
+    overflow: hidden;
+}
+
+.project-main-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: var(--radius-md);
+}
+
+/* MINI KÉPEK */
+
+.project-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm);
+}
+
+.project-thumbnail {
+    padding: 0;
+
+    background: var(--color-surface);
+
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.project-thumbnail:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-link-hover);
+}
+
+.project-thumbnail.active {
+    border-color: var(--color-primary);
+}
+
+/* JOBB OLDALI SZÖVEG */
+
+.project-description {
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+
+    padding: var(--space-2xl);
+
+    box-shadow: var(--shadow-panel);
+}
+
+.project-description h2 {
+    margin-top: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+}
+
+.project-description h3 {
+    font-family: var(--font-heading);
+    margin-top: var(--space-xl);
+}
+
+.project-description p {
+    line-height: 1.8;
+}
+
+/* ÖSSZEFOGLALÓ DOBOZOK */
+
+.project-summary {
+    list-style: none;
+
+    padding: 0;
+    margin: var(--space-lg) 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.project-summary li {
+    background-color: var(--color-surface-soft);
+
+    border-radius: var(--radius-md);
+
+    padding: var(--space-md) var(--space-lg);
+
+    font-size: clamp(0.95rem, 1vw, 1.1rem);
+}
+
+.project-summary li::before {
+    content: "✓";
+
+    font-weight: 700;
+
+    margin-right: var(--space-sm);
+}
+
+/* GOMBOK */
+
+.project-actions {
+    display: flex;
+    gap: var(--space-md);
+
+    margin-top: var(--space-xl);
+
+    flex-wrap: wrap;
+}
+
+.project-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--space-sm) var(--space-xl);
+
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: var(--transition-base);
+}
+
+.project-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    transform: translateY(-2px);
+}
+
+.project-button-disabled {
+    pointer-events: none;
+
+    background-color: var(--color-surface-muted);
+    color: var(--color-text-muted);
+    border-color: var(--color-border-subtle);
+}
+
+@media (min-width: 850px) {
+    .project-section .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-section .projects-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .project-details {
+        width: 90%;
+        max-width: 1400px;
+        margin: var(--space-3xl) auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-3xl);
+
+        align-items: start;
+    }
+}

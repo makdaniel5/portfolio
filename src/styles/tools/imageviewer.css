@@ -1,0 +1,178 @@
+/* A kattintható kép gombja */
+.image-open-button {
+    display: block;
+    width: 100%;
+
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    background: transparent;
+    color: inherit;
+
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+
+    text-align: inherit;
+    font: inherit;
+
+    border-radius: 0;
+}
+
+/* Ne legyen alap button keret/külső stílus */
+.image-open-button:hover,
+.image-open-button:active {
+    border: none;
+    background: transparent;
+}
+
+/* Billentyűzetes fókusz maradjon látható */
+.image-open-button:focus {
+    outline: none;
+}
+
+.image-open-button:focus-visible {
+    outline: 3px solid #111111;
+    outline-offset: 4px;
+    border-radius: 0.5rem;
+}
+
+/* A buttonben lévő kép */
+.image-open-button img {
+    display: block;
+    max-width: 100%;
+
+    border: none;
+    padding: 0;
+}
+
+.image-open-button-inline {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+/* Ha a régi class miatt jönne keret */
+.project-image.thumb,
+.thumb {
+    border: none;
+    outline: none;
+}
+
+/* Modal háttér */
+.image-viewer-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Modal doboz */
+.image-viewer-modal {
+    position: relative;
+
+    width: fit-content;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    overflow: auto;
+}
+
+/* Bezáró gomb */
+.image-viewer-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #111111;
+    border-radius: 999px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* Bezáró gomb hover/focus */
+.image-viewer-close:hover,
+.image-viewer-close:focus-visible {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Nagyított kép */
+.image-viewer-large-image {
+    display: block;
+
+    max-width: calc(90vw - 2rem);
+    max-height: 75vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+    border: none;
+    border-radius: 0.7rem;
+
+    margin: 0 auto;
+}
+
+/* Képaláírás */
+.image-viewer-caption {
+    margin-top: 1rem;
+    margin-bottom: 0;
+
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Mobilon kisebb padding */
+@media (max-width: 768px) {
+    .image-viewer-backdrop {
+        padding: 1rem;
+    }
+
+    .image-viewer-modal {
+        max-width: 95vw;
+        max-height: 90vh;
+        padding: 0.75rem;
+    }
+
+    .image-viewer-large-image {
+        max-height: 70vh;
+    }
+
+    .image-viewer-close {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.6rem;
+    }
+}
