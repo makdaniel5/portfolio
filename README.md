@@ -7,7 +7,6 @@ Ez a projekt egy személyes portfólió weboldal, amely bemutatja a munkáimat, 
 - Reszponzív, modern felület
 - Projektbemutató oldalak
 - Akadálymentesítési funkciók
-- Kontraszt mód
 - Képnagyító modal / image viewer
 - Videófelirat és transcript támogatás
 - React Router alapú többoldalas navigáció
