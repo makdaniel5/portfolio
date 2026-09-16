@@ -14,7 +14,8 @@
 }
 
 .service {
-    flex: 1 1 100%;
+    flex: 0 1 100%;
+    min-width: 0;
     padding: 1.125rem;
     background-color: var(--color-surface);
     border: 1px solid var(--color-border-subtle);
@@ -28,10 +29,15 @@
 
 .service-img {
     width: 100%;
-    height: 170px;
+    aspect-ratio: 16 / 10;
+    height: auto;
     object-fit: cover;
     display: block;
     cursor: pointer;
+    margin-bottom: 0;
+}
+
+.service .image-open-button {
     margin-bottom: 1.125rem;
 }
 
@@ -64,6 +70,8 @@
 .prices-img {
     width: 100%;
     max-width: 860px;
+    aspect-ratio: 16 / 9;
+    height: auto;
     object-fit: cover;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-card);
@@ -187,6 +195,10 @@
     .service {
         flex-basis: calc((100% - var(--space-md)) / 2);
     }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (min-width: 1000px) {
@@ -194,6 +206,12 @@
         flex-basis: calc((100% - 2 * var(--space-md)) / 3);
     }
 
+    .steps-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1200px) {
     .steps-grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
