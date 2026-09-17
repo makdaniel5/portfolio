@@ -70,7 +70,6 @@
 .prices-img {
     width: 100%;
     max-width: 860px;
-    aspect-ratio: 16 / 9;
     height: auto;
     object-fit: cover;
     border-radius: var(--radius-lg);

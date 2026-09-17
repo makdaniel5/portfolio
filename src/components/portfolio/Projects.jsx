@@ -10,8 +10,6 @@ function Projects() {
       <p>
         A portfólióban olyan projekteket gyűjtöttem össze, amelyek oktatáshoz, programozáshoz, tanulásmódszertanhoz, kutatáshoz és vizuális szakmai anyagokhoz kapcsolódnak.
       </p>
-
-      <h2>Projektjeim</h2>
       <div className="categories-grid">
         {categories.map((category) => (
           <article className="category" key={category.id}>
