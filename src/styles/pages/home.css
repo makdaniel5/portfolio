@@ -142,8 +142,14 @@
     padding: var(--panel-padding);
 }
 
+.reviews h2 {
+    margin: var(--space-xs) 0 var(--space-lg) 0;
+}
+
 .review-track {
-    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 28rem;
 }
 
 .review-person {
@@ -189,7 +195,8 @@
     align-items: center;
     justify-content: center;
     gap: var(--control-gap);
-    margin-top: var(--control-gap);
+    margin-top: auto;
+    padding-top: var(--control-gap);
 }
 
 .review-dots {
@@ -237,7 +244,9 @@
 }
 
 .review-slide.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     margin: var(--space-0);
 }
 
@@ -258,6 +267,9 @@
 }
 
 .review-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
     font-size: clamp(0.8rem, 1vw, 1.1rem);
     background-color: var(--color-surface-muted);
@@ -265,24 +277,29 @@
     padding: var(--button-padding-sm);
     border: none;
     border-radius: var(--radius-lg);
+    text-align: center;
 }
 
 .review-cta {
+    flex: 1;
     color: var(--color-surface-muted);
     background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: var(--space-lg);
     border: none;
-    border-radius: var(--radius-sm);
-    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl) var(--space-lg);
 }
 
 .review-cta h3 {
-    font-size: clamp(1rem, 1.7vw, 2rem);
+    max-width: 28rem;
+    font-size: clamp(1.25rem, 5vw, 2rem);
+    line-height: 1.35;
     text-align: center;
-    margin-bottom: var(--space-lg);
+    margin: var(--space-0);
 }
 
 .fields h2 {
@@ -449,8 +466,12 @@
 }
 
 @media (min-width: 760px) {
+    .review-track {
+        min-height: 10.5rem;
+    }
+
     .review-slide {
-        min-height: 14rem;
+        min-height: 12.5rem;
     }
 
     .review-slide p {

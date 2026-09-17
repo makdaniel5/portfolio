@@ -43,10 +43,17 @@ const DigitalisTananyagtar = lazy(() =>
   import("./pages/projects/DigitalisTananyagtar.jsx")
 );
 
+function RouteLoader() {
+  return (
+    <div className="route-loader" role="status" aria-label="Oldal betoltese">
+      <span className="route-loader-spinner"></span>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <Suspense fallback={<div>Betöltés...</div>}>
+    <Suspense fallback={<RouteLoader />}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
